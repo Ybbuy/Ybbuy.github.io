@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			window.jQuery || document.write("<script type='text/javascript' src='js/jquery_1.9.js' ><\/script>")
+		</script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.cycle.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#banner').cycle({ 
+						fx:'scrollLeft',
+						pager:'#btn'
+				});
+				$("#btn a").html("");
+				$("#nav li").each(function(index){
+					$(this).hover(
+						function(){
+							$("#nav i:eq("+index+")").animate({
+								width: $(this).width()
+						},100)}
+						,function(){
+						$("#nav i:eq("+index+")").animate({
+							width: 0
+						},300)
+					})
+				})
+				var time = new Date(),month;
+				((time.getMonth()+1) == 12) &&(month = "DEC")
+				$("#box-left .month").html(month);
+				$("#box-left .day").html(time.getDate());
+				
+				$(".tu").each(function(index){
+					$(".tu:eq("+index+")").hover(function(){
+						$(this).animate({backgroundPosition: "55% 50%"});
+						$(this).children().css("background-color","rgba(0,0,0,0)");
+						$(this).find(".jianbianhei").animate({top: 0},300);
+						$(this).find(".hong").animate({bottom: 0},300);
+						$(this).find(".p-1").animate({paddingTop: 40});
+						$(this).find(".p-2").animate({bottom: 40})
+					},function(){
+						$(this).animate({backgroundPosition: "30% 50%"})
+						$(this).children().css("background-color","rgba(0,0,0,.5)");
+						$(this).find(".jianbianhei").animate({top: "-120px"},300);
+						$(this).find(".hong").animate({bottom: "-120px"},300);
+						$(this).find(".p-1").animate({paddingTop: 70});
+						$(this).find(".p-2").animate({bottom: 100})
+					})
+					
+				})
+				$("#btn1").click(function(){
+					$("#keng1").animate({left: "-640px"});
+					$("#keng2").animate({left: "0"});
+				})
+				$("#btn2").click(function(){
+					$("#keng1").animate({left: "0"});
+					$("#keng2").animate({left: "640px"});
+				})
+				$(".zan").click(function(){
+					$(this).find("span").show().animate({top: "-20px"},function(){
+						$(this).hide("300",function(){
+							$(this).css("top","0");
+						});
+					});
+					var numZan = $(this).find("em").html();
+					$(this).find("em").html(parseInt(numZan)+1);
+				})
+				$(".redian1>a").hover(function(){
+					$(this).find("img").animate({"width":"450px"},800);
+				},function(){
+					$(this).find("img").animate({"width":"400px"},800)
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<div class="kuan" style="overflow: hidden;">
+				<a href="#">
+					<img src="img/163logo.png"/>
+				</a>
+				<ul id="nav">
+					<li><i></i>游戏，热爱才懂</li>
+					<span>·</span>
+					<li><i></i>网易游戏APP</li>
+					<span>·</span>
+					<li><i></i>关于网易游戏</li>
+					<span>·</span>
+					<li><i></i>人才招聘</li>
+					<span>·</span>
+					<li><i></i>客服中心</li>
+					<span>·</span>
+					<li><i></i>爱玩网</li>
+				</ul>
+			</div>
+		</div>
+		<div class="banner_main">
+			<div id="banner">
+		    	<div><img  src="img/1.jpg" ></div>
+		    	<div><img  src="img/2.jpg" ></div>
+		    	<div><img  src="img/3.jpg" ></div>
+		    	<div><img  src="img/4.jpg" ></div>
+		    	<div><img  src="img/5.jpg" ></div>
+			</div>
+			<div id="btn"></div>
+		</div>
+		<div id="con-box">
+			<div class="kuan" style="position: relative;">
+				<div id="box-left">
+					<p class="month"></p>
+					<h2 class="day"></h2>
+					<i class="hongxian"></i>
+					<p class="yxdt">游戏动态</p>
+					<div id="small-btn">
+						<a id="btn1"></a>
+						<a id="btn2"></a>
+					</div>
+				</div>
+				<div id="keng">
+					<div id="keng1">
+						<a href="#" id="tu1" class="tu">
+							<div class="tu-hei-touming">
+								<p class="p-1">《我守护的一切》开放净化祭坛Hard模式</p>
+								<p class="p-2">霸榜ARPG《我守护的一切》更新副本带来诸多新玩法</p>
+								<div class="jianbianhei"></div>
+								<div class="hong"></div>
+							</div>
+						</a>
+						<a href="#" id="tu2" class="tu">
+							<div class="tu-hei-touming">
+								<p class="p-1">大话西游2016玩家嘉年华</p>
+								<p class="p-2">好兄弟，来一聚！原汁原味长安城等你来玩</p>
+								<div class="jianbianhei"></div>
+								<div class="hong"></div>
+							</div>
+						</a>
+					</div>
+					<div id="keng2">
+						<a href="#" id="tu3" class="tu">
+							<div class="tu-hei-touming">
+								<p class="p-1">《我守护的一切》开放净化祭坛Hard模式</p>
+								<p class="p-2">霸榜ARPG《我守护的一切》更新副本带来诸多新玩法</p>
+								<div class="jianbianhei"></div>
+								<div class="hong"></div>
+							</div>
+						</a>
+						<a href="#" id="tu4" class="tu">
+							<div class="tu-hei-touming">
+								<p class="p-1">大话西游2016玩家嘉年华</p>
+								<p class="p-2">好兄弟，来一聚！原汁原味长安城等你来玩</p>
+								<div class="jianbianhei"></div>
+								<div class="hong"></div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div id="box-right">
+					<a href="#"></a>
+					<h1 class="title">黑道大小姐剑菱樱惊艳起舞，《元气战姬学院》性感撩人MMD首发！</h1>
+					<ul>
+						<li><a href="#">《天下3》携手外设行业NO.1，极致感官体验革新在即！</a></li>
+						<li><a href="#">网易玩家专属会员平台“奇遇俱乐部”首次测试即将开启</a></li>
+						<li><a href="#">《天下3》携手外设行业NO.1，极致感官体验革新在即！</a></li>
+						<li><a href="#">网易玩家专属会员平台“奇遇俱乐部”首次测试即将开启</a></li>
+						<li><a href="#">《天下3》携手外设行业NO.1，极致感官体验革新在即！</a></li>
+						<li><a href="#">网易玩家专属会员平台“奇遇俱乐部”首次测试即将开启</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="kuan">
+			<h1 style="font-size: 22px;font-weight: 400;padding-left: 20px; line-height: 22px;border-left: 5px solid #CF0F32;box-sizing: border-box;margin: 30px 0;">游戏热点</h1>
+		</div>
+		<div class="kuan" id="redian">
+			<div class="redian1">
+				<a href="#">
+					<img src="img/redian1.jpg"/>
+				</a>
+				<p class="hot-title">《永恒边境》实录展示视频首曝</p>
+				<p class="hot-txt">《永恒边境》是网易大世界RPG射击手游，拥有2085万方无缝大世界，协同作战超大战场，带来FPS与RPG完美新体验。</p>
+				<span class="zan">
+					<a class="zan-main">
+						<span style="color: red;position: absolute;left: 5px;display: none;">+1</span>
+						<em>600</em>人赞过
+					</a>
+				</span>
+			</div>
+			<div class="redian1">
+				<a href="#">
+					<img src="img/redian2.jpg"/>
+				</a>
+				<p class="hot-title">《倩女幽魂》手游11月新职业来袭</p>
+				<p class="hot-txt">《倩女幽魂》手游11月新职业来袭！新职业男侠客登场，新增LBS定位玩法、跨服关宁，更有年末玩家盛典等你参加！</p>
+				<span class="zan">
+					<a class="zan-main">
+						<span style="color: red;position: absolute;left: 5px;display: none;">+1</span>
+						<em>1260</em>人赞过
+					</a>
+				</span>
+			</div>
+			<div class="redian1">
+				<a href="#">
+					<img src="img/redian3.jpg"/>
+				</a>
+				<p class="hot-title">《来自星星的你》手游浪漫归来</p>
+				<p class="hot-txt">韩国正版授权，店铺经营养成手游《来自星星的你》开启万圣狂欢节活动，获取限定主题套装，珍品阁超多惊喜等你邂逅！</p>
+				<span class="zan">
+					<a class="zan-main">
+						<span style="color: red;position: absolute;left: 5px;display: none;">+1</span>
+						<em>190</em>人赞过
+					</a>
+				</span>
+			</div>
+		</div>
+		
+		<div id="footer" class="kuan">
+			<div class="con-box f-cb">
+				<div class="link-li-box link-li-box1">
+				<p>游戏助手</p>
+				<a href="http://mumu.163.com/" target="_blank"><span class="txt1">网易MuMu</span><br>
+				<span class="txt2">电脑玩手游官方模拟器</span> </a> <a href="//game.163.com/app/" target="_blank"><span class="txt1">网易游戏APP</span><br>
+				<span class="txt2">网易官方游戏中心</span> </a></div>
+				
+				<div class="link-li-box link-li-box2">
+				<p>充值购卡</p>
+				<a href="http://pay.163.com/index.jsp" target="_blank"><span class="txt1">充值服务</span><br>
+				<span class="txt2">安全，多样，快捷</span> </a><a href="http://ecard.163.com/script/index" target="_blank"><span class="txt1">在线购卡</span><br>
+				<span class="txt2">在线支付，即时使用</span> </a><a href="http://cbg.163.com/" target="_blank"><span class="txt1">藏宝阁</span><br>
+				<span class="txt2">游戏道具交易系统</span> </a><a href="http://gift.163.com/" target="_blank"><span class="txt1">网易游戏印象</span><br>
+				<span class="txt2">网易周边，官方正品</span> </a></div>
+				
+				<div class="link-li-box link-li-box3">
+				<p>安全保障</p>
+				<a href="http://mkey.163.com/" target="_blank"><span class="txt1">手机将军令</span><br>
+				<span class="txt2">帐号安全，一手掌握</span> </a><a href="http://www.cogcpa.org/" target="_blank"><span class="txt1">举报中心</span><br>
+				<span class="txt2">中国网络游戏版权联盟</span> </a></div>
+				
+				<div class="link-li-box link-li-box4">
+				<p>辅助工具</p>
+				<a href="http://my.baike.163.com/" target="_blank"><span class="txt1">梦幻手游百科</span><br>
+				<span class="txt2">梦幻手游精品资料攻略</span> </a><a href="http://uu.163.com/" target="_blank"><span class="txt1">UU加速器</span><br>
+				<span class="txt2">让您的游戏更顺畅</span> </a><a href="http://cc.163.com/" target="_blank"><span class="txt1">CC语音</span><br>
+				<span class="txt2">沟通无阻，畅玩游戏</span> </a><a href="http://baike.163.com/" target="_blank"><span class="txt1">游戏百科</span><br>
+				<span class="txt2">专业齐全的游戏知识</span> </a><a href="http://ugame.163.com/" target="_blank"><span class="txt1">高校联盟</span><br>
+				<span class="txt2">社团活动扶持基地</span> </a><a href="http://gs.163.com/" target="_blank"><span class="txt1">游戏推广员</span><br>
+				<span class="txt2">参与推广，获游戏大奖</span> </a><a href="http://nb.163.com/" target="_blank"><span class="txt1">网易VIP网吧</span><br>
+				<span class="txt2">享特权，领奖励</span> </a><a href="http://ypw.163.com/" target="_blank"><span class="txt1">游品位</span><br>
+				<span class="txt2">全球精品游戏推荐平台</span> </a></div>
+				
+				<p class="con-wrap6-other"><span>客户服务</span> &gt; <a href="http://gm.163.com/" target="_blank">GM服务</a> | <a href="http://mima.163.com/" target="_blank">帐号修复</a> | <a href="http://reg.163.com/" target="_blank">更改密码</a> | <a href="http://mvip.163.com/" target="_blank">手机验证特权</a> | <a href="http://zhidao.163.com/" target="_blank">游戏知道</a> | <a href="http://mibao.gm.163.com/" target="_blank">密保中心</a> | <a href="http://box.gm.163.com/" target="_blank">自助百宝箱</a> | <span class="phone-tips">客户电话</span> &gt; <span class="phone-num">020-83918160</span></p>
+				</div>
+		</div>
+		<div id="NIE-copyRight">
+	<p id="NIE-copyRight-corp" style="width:765px;text-align:left;margin:0 auto;padding:15px 0 0 0;font-size:12px;font-family:'宋体';line-height:20px;display:block;position:relative;">
+		<span style="position:relative;vertical-align:top;top:4px;display:inline-block;position:relative;">
+			<a href="http://www.163.com" target="_blank" style="width:118px;height:31px;padding-right:0;display:inline-block;cursor:pointer;background:url(img/netease.2.png) no-repeat"></a>
+			<a href="http://game.163.com" target="_blank" style="width:134px;height:31px;padding-right:15px;display:inline-block;cursor:pointer;background:url(img/nie.2.png) no-repeat"></a>
+			<a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/5F3BB7FDD27D4B01964F56E1FFBADD53" target="_blank" style="width:31px;height:31px;padding-right:15px;display:inline-block;cursor:pointer;background:url(img/wen.png) no-repeat"></a>
+		</span>
+		<span style="text-align:left;display:inline-block;padding-left:6px;">
+			<span id="ncp-l1">
+				<a href="http://gb.corp.163.com/gb/about/overview.html" target="_blank">公司简介</a> - <a href="http://help.163.com/" target="_blank">客户服务</a>
+				 - 
+				 <a href="http://gb.corp.163.com/gb/legal.html" target="_blank">相关法律</a> - <a href="http://game.163.com/about/about.html" target="_blank">网易游戏</a>
+				  - 
+				  <a href="http://game.163.com/about/contactus.html" target="_blank">联系我们</a> - <a href="http://game.163.com/bs/business.html" target="_blank">商务合作</a>
+				   - 
+				   <a href="http://game.163.com/job/" target="_blank">加入我们</a>
+			</span><br>
+			<span id="ncp-l2">网易公司版权所有 ©1997-2016　　  <a href="http://www.cogcpa.org" target="_blank">中国网络游戏版权保护联盟举报中心</a></span></span><br><span id="ncp-l3" style="display:inline-block;padding-top:10px;">《网络文化经营许可证》粤网文[2014]0636-236号 </span></p>
+</div>
+	</body>
+</html>

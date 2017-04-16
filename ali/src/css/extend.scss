@@ -1,0 +1,27 @@
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after{
+    content: '';height: 0;display: block;visibility: hidden;clear: both;
+}
+.m0{margin: 0;}
+.active{background: #28d0e9;}
+.selectBtn{background: #fff!important;border-top: 2px solid #28d0e9!important;}
+.center{width: 1200px; margin: 0 auto;}
+.disNone{display: none;}
+.disBlock{display: block;}
+.fontCenter{text-align: center;line-height: 50px;}
+.fontBtn{
+    width: 80px;height: 50px;border: 1px solid #fff;padding: 10px 20px;
+}
+.whiteFont{color: #fff;}
+.cccFont{color: #ccc;}
+.borderButtom{border-bottom: 1px solid #666;}
+.borderright{border-right: 1px solid #666;}
+.borderleft{border-left: 1px solid #666;}
+.smallFont{font-size: 10px;}
+.bigFont{font-size: 18px;}
+.titlefont{font-size: 25px;}
+.title2font{font-size: 18px;}
+.bodyfont{font-size: 10px;}
+.padingleft{padding-left: 25px;}
+.mokuai{width: 400px;height: 550px;border: 1px solid #eee; margin-top: 50px;}

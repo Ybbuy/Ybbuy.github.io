@@ -1,0 +1,48 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>诺心-情人节语音定制蛋糕</title><link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><link rel="stylesheet" href="css/valentineDay.css"></head><body><header class="header"><i class="iconfont icon-fudai"></i></header><aside><ul class="sort_total"><li><a href="lecake.html">首页</a></li><li><ul><li><a href="cake.html">蛋糕馆</a></li><li><a href="javascript:;">礼品馆</a></li><li><a href="javascript:;">创意馆</a></li><li><a href="lecake.html">心享荟</a></li></ul></li><li><ul><li><a href="javascript:;">爱情系列</a></li><li><a href="javascript:;">金牌系列</a></li><li><a href="javascript:;">节日系列</a></li><li><a href="javascript:;">人气系列</a></li><li><a href="javascript:;">鲜果系列</a></li><li><a href="javascript:;">儿童系列</a></li></ul></li></ul></aside><article></article><section class="wrapper"><div class="scroller"><div class="section_item"><img src="img/valentine1.jpg"></div><div class="section_item"><img src="img/valentine2.jpg"> <a class="roseCake_box" href="javascript:;"><img class="roseCake roseCake1 animation_img" src="img/roseCake.png"></a><a class="audio_control_btn" href="javascript:;"></a> <a class="buy buy1"></a> <i class="icon_voices"></i></div><div class="section_item"><img src="img/valentine3.jpg"> <img class="animation_img zi1" src="img/zi1.png"></div><div class="section_item"><img src="img/valentine4.jpg"> <img class="animation_img zi2" src="img/zi2.png"></div><div class="section_item"><img src="img/valentine5.jpg"> <a class="roseCake_box" href="javascript:;"><img class="roseCake roseCake2 animation_img" src="img/roseCake2.png"></a><a class="buy"></a></div><div class="section_item"><img src="img/valentine6.jpg"></div></div></section><audio id="media"><source src="king.mp3"></audio></body><script src="js/jquery_1.9.js"></script><script src="js/aside.js"></script><script>var meida=$("#media")[0];
+		var audioTimer=null;
+		
+		//绑定播放暂停控制
+		$(".audio_control_btn").bind('click',function(){
+			playAudio();
+		});
+		
+		//播放暂停切换
+		function playAudio(){
+			if(media.paused){
+				play();
+			}else{
+				pause()
+			}
+		}
+		
+		//播放
+		function play(){
+			media.play();
+		}
+		
+		//暂停
+		function pause(){
+			media.pause();
+		}</script><script type="text/javascript">$(window).load(function(){
+			$(".roseCake1").addClass("active");
+		})
+		$(document).scroll(function(){
+			var t=$(document).scrollTop();
+			if(t<$(".zi1").offset().top){
+				$(".roseCake1").addClass("active");
+				$(".roseCake2").removeClass("active");
+			}
+			if(t>$(".roseCake1").offset().top){
+				$(".zi1").addClass("active");
+				$(".roseCake1").removeClass("active");
+			}
+			if(t>$(".zi1").offset().top){
+				$(".zi2").addClass("active");
+				$(".zi1").removeClass("active");
+			}
+			if(t>$(".zi2").offset().top){
+				$(".roseCake2").addClass("active");
+				$(".zi2").removeClass("active");
+				$(".roseCake1").removeClass("active");
+			}
+		})</script></html>

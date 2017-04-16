@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>小米路由器3</title>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link type="text/css" rel="stylesheet" href="fullpagecss/reset.css" />
+		<link type="text/css" rel="stylesheet" href="fullpagecss/myfullpage.css" />
+		<link type="text/css" rel="stylesheet" href="fullpagecss/jquery.css" />
+		<script src="fullpagejs/jquery.min.js"></script>
+		<script src="fullpagejs/jquery-ui.min.js"></script>
+		<script src="fullpagejs/jquery.fullPage.min.js"></script>
+		<script>
+			$(function(){
+				$("#superContainer").fullpage({
+					verticalCentered: false,
+					anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
+					navigation: true,
+					navigationTooltips: ['首页介绍', '信号强度', '速度快慢', '超清下载', '覆盖范围','隐私保护','了解详情'],
+					afterLoad: function(anchorLink, index){
+						if(index==2){
+							$('.section2 .webfont').delay(300).animate({
+								top: '0'
+							}, 1500, 'easeOutExpo');
+							$('.section2 p').delay(600).animate({
+								bottom: '0'
+							}, 1500, 'easeOutExpo');
+							$('.clearfix .first').delay(1300).animate({
+								left: '0'
+							}, 2000, 'easeOutExpo');
+							$('.clearfix .second').delay(1000).animate({
+								left: '0'
+							}, 1500, 'easeOutExpo');
+							$('.clearfix .third').delay(1000).animate({
+								right: '0'
+							}, 1500, 'easeOutExpo');
+							$('.clearfix .four').delay(1300).animate({
+								right: '0'
+							}, 2000, 'easeOutExpo');
+						}
+						if(index == 3){
+							$('.section3 .film').delay(100).animate({
+								left:"200px",top:"50px"
+							}, 800, 'easeInExpo');
+							$('.section3 .game').delay(300).animate({
+								left:"300px",top:"20px"
+							}, 800, 'easeInExpo');
+							$('.section3 .fast').delay(400).animate({
+								left:"380px",top:"-2px"
+							}, 800, 'easeInExpo');
+							$('.section3 .quxian').delay(500).animate({
+								opacity:1,
+							},1000, 'easeInExpo',function(){
+								$(".num_54").animate({opacity:1},'easeInExpo',function(){
+									$(".num_300").animate({opacity:1},'easeInExpo',function(){
+										$(".num_1167").animate({opacity:1},'easeInExpo',function(){
+											$(".faster").animate({opacity:1},'easeInExpo');
+										});
+									});
+								});
+							});
+						}
+						if(index == 5){
+							$('.section5 h4').delay(300).animate({left:'50%'},1000,'easeOutExpo');
+							$('.section5 p').delay(300).animate({right:'20%'},1000,'easeOutExpo');
+						}
+						if(index == 6){
+							$('.section6 .item01 .icon').delay(300).animate({top:"500px",right:"-680px"},1000,'easeOutExpo');
+							$('.section6 .item01 .title').delay(300).animate({top:"530px",right:"-760px"},1000,'easeOutExpo');
+							$('.section6 .item02 .icon').delay(300).animate({top:"260px",right:"-750px"},1000,'easeOutExpo');
+							$('.section6 .item02 .title').delay(300).animate({top:"290px",right:"-810px"},1000,'easeOutExpo');
+							$('.section6 .item03 .icon').delay(300).animate({top:"50px",left:"240px"},1000,'easeOutExpo');
+							$('.section6 .item03 .title').delay(300).animate({top:"50px",left:"160px"},1000,'easeOutExpo');
+							$('.section6 .item04 .icon').delay(300).animate({bottom:"-630px",left:"350px"},1000,'easeOutExpo');
+							$('.section6 .item04 .title').delay(300).animate({bottom:"-550px",left:"160px"},1000,'easeOutExpo');
+							$('.section6 .item05 .icon').delay(300).animate({top:"20px",right:"-400px"},1000,'easeOutExpo');
+							$('.section6 .item05 .title').delay(300).animate({top:"30px",right:"-475px"},1000,'easeOutExpo');
+							$('.section6 .item06 .icon').delay(300).animate({top:"280px",left:"180px"},1000,'easeOutExpo');
+							$('.section6 .item06 .title').delay(300).animate({top:"300px",left:"140px"},1000,'easeOutExpo');
+							$('.section6 .item07 .icon').delay(300).animate({top:"80px",right:"-680px"},1000,'easeOutExpo');
+							$('.section6 .item07 .title').delay(300).animate({top:"80px",right:"-780px"},1000,'easeOutExpo');
+						}
+						if(index == 7){
+							$('.section7 .webfont').animate({top:"100px"},500,'easeInExpo');
+							$('.section7 .int').animate({opacity:1},2500,'easeOutExpo');
+						}
+					},
+					onLeave: function(index, direction){
+						if(index == '2'){
+							$('.clearfix .first').delay(100).animate({
+								left: '-380px'
+							}, 1000, 'easeOutExpo');
+							$('.clearfix .second').delay(150).animate({
+								left: '-580px'
+							}, 1500, 'easeOutExpo');
+							$('.clearfix .third').delay(150).animate({
+								right: '-580px'
+							}, 1500, 'easeOutExpo');
+							$('.clearfix .four').delay(100).animate({
+								right: '-380px'
+							}, 1000, 'easeOutExpo');
+							$('.section2 .webfont').delay(200).animate({
+								top: '-150px'
+							}, 1500, 'easeOutExpo');
+							$('.section2 p').delay(200).animate({
+								bottom: '-700px'
+							}, 3000, 'easeOutExpo');
+						}
+						if(index == '3'){
+							$("span.num_54,span.num_300,span.num_1167").animate({opacity:0},'easeInExpo');
+							$('.section3 .film').animate({
+								left:"-600px",top:"50px"
+							}, 1500, 'easeOutExpo');
+							$('.section3 .game').animate({
+								left:"300px",top:"-150px"
+							}, 1500, 'easeOutExpo');
+							$('.section3 .fast').animate({
+								left:"1000px",top:"-2px"
+							}, 1500, 'easeOutExpo');
+							$('.section3 .quxian').animate({
+								opacity:0,
+							},1000, 'easeOutExpo');
+						}
+						if(index == '5'){
+							$("#fullPage-nav span").css("opacity",1);
+							$('.section5 h4').delay(300).animate({left:'-50%'},1000,'easeOutExpo');
+							$('.section5 p').delay(300).animate({right:'-50%'},1000,'easeOutExpo');
+						}
+						if(index == '6'){
+							$("#fullPage-nav span").css("opacity",1);
+							$('.section6 .item01 .icon').delay(300).animate({top:"0",right:"0"},500,'easeOutExpo');
+							$('.section6 .item01 .title').delay(300).animate({top:"0",right:"0"},500,'easeOutExpo');
+							$('.section6 .item02 .icon').delay(300).animate({top:"0",right:"0"},500,'easeOutExpo');
+							$('.section6 .item02 .title').delay(300).animate({top:"0",right:"0"},500,'easeOutExpo');
+							$('.section6 .item03 .icon').delay(300).animate({top:"0",left:"0"},500,'easeOutExpo');
+							$('.section6 .item03 .title').delay(300).animate({top:"0",left:"0"},500,'easeOutExpo');
+							$('.section6 .item04 .icon').delay(300).animate({bottom:"0",left:"0"},500,'easeOutExpo');
+							$('.section6 .item04 .title').delay(300).animate({bottom:"0",left:"0"},500,'easeOutExpo');
+							$('.section6 .item05 .icon').delay(300).animate({top:"0",right:"0"},500,'easeOutExpo');
+							$('.section6 .item05 .title').delay(300).animate({top:"",right:""},500,'easeOutExpo');
+							$('.section6 .item06 .icon').delay(300).animate({top:"",left:""},500,'easeOutExpo');
+							$('.section6 .item06 .title').delay(300).animate({top:"",left:""},500,'easeOutExpo');
+							$('.section6 .item07 .icon').delay(300).animate({top:"",right:""},500,'easeOutExpo');
+							$('.section6 .item07 .title').delay(300).animate({top:"",right:""},500,'easeOutExpo');
+						}
+					}
+				});
+			});
+		</script>
+	</head>
+	<body style="overflow: hidden; height: 100%;">
+		<div id="superContainer" style="top: 0px;">
+		<div class="section section1">
+			<div class="bg"><img src="images/section1.jpg" alt=""></div>
+			<div class="hgroup"></div>
+			<p class="p11">小米路由器3&mdash;&mdash;信号更好的路由器。<br>普通WIFI的3倍速度，让家中宽带发挥最大的价值。</p>
+		</div>
+		
+		<div class="section section2 width">
+			<h2 class="webfont">一台信号更好的路由器</h2>
+			<p>
+				全新的四天线设计，802.11ac 千兆WiFi，128MB超大Flash配置，易用好玩的专属App。<br />
+				你眼前的这台小米路由器3不仅信号更好、覆盖面积更大、稳定连接的设备数更多，我们还对之前深受用户好评的功能进行了优化。<br />
+				做了很多，只为给你一台信号更好的智能路由器。
+			</p>
+			<ul class="clearfix">
+				<li class="first">
+					<span class="circle icon01"></span>
+					<span class="infor">
+						覆盖更广<br />
+						信号更强
+					</span>
+				</li>
+				<li  class="second">
+					<span class="circle icon02"></span>
+					<span class="infor">
+						802.11ac<br />
+						双频并发
+					</span>
+				</li>
+				<li class="third">
+					<span class="circle icon03"></span>
+					<span class="infor">
+						随时随地<br />
+						方便管理
+					</span>
+				</li>
+				<li class="four">
+					<span class="circle icon04"></span>
+					<span class="infor">
+						稳定连接<br />
+						更多设备
+					</span>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="section section3">
+			<div class="bg"><img src="images/section6.jpg" alt=""></div>
+			<div class="bg61"></div>
+			<div class="width">
+				<p class="film">看电影</p>
+				<p class="game">玩游戏</p>
+				<p class="fast">快的有道理</p>
+				<span class="faster">普通WiFi的3倍速度，让家中带宽发挥最大价值</span>
+				<div class="num_map">
+					<span class="num_54"><b>54</b>Mbps</span>
+					<span class="num_300"><b>300</b>Mbps</span>
+					<span class="num_1167"><b class="j_num">1167</b>Mbps</span>
+					<div class="num_pic">
+						<img class="quxian" src="images/quxian.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="section section4">
+			<div class="bg"><img src="images/section4.jpg" alt=""></div>
+			<div class="bg41"></div>
+			<div class="bg42"></div>
+			<div class="bg43"></div>
+			<h3>在线看卡顿？不如随时下载超清试试</h3>
+			<strong>轻松打造智能影音中心</strong>
+			<p class="p1">如果带宽不给力，在线看片不流畅，不如下载到本地观看更爽快。给小米路由器3插上一块移动硬盘，把它升级成为一个最具性价比的智能影音中心。小米路由器App支持视频资源在线搜索，同时还内置了爱奇艺、小米视频等海量高清正版影视资源，你可以通过小米路由器App将这些影片一键离线下载至路由器连接的移动存储设备，回到家中打开小米电视、手机、Pad或电脑都可以欣赏到高清影片。</p>
+		</div>
+		
+		<div class="section section5">
+			<div class="bg"><img src="images/section5.jpg" alt=""></div>
+			<h4>跳出房子的WiFi信号，覆盖更广</h4>
+			<p>支持多达126台上网设备连接，满足全家需求</p>
+			<div class="circle">
+				<div class="circle_a"></div>
+				<div class="circle_b"></div>
+				<div class="circle_c"></div>
+			</div>
+		</div>
+		
+		<div class="section section6">
+			<div class="bg"><img src="images/section66.jpg" alt=""></div>
+			<strong>重要的个人隐私，给你七重安全防护</strong>
+			<div class="itemWrap">
+				<div class="item item01">
+					<span class="icon current"></span>
+					<span class="title">防蹭网</span>
+				</div>
+				<div class="item item02">
+					<span class="icon"></span>
+					<span class="title">防破解</span>
+				</div>
+				<div class="item item03">
+					<div class="con">
+						<span class="icon"></span>
+						<span class="title">防劫持</span>
+					</div>
+				</div>
+				<div class="item item04">
+					<div class="con">
+						<span class="icon"></span>
+						<span class="title">防病毒</span>
+					</div>
+				</div>
+				<div class="item item05">
+					<div class="con">
+						<span class="icon"></span>
+						<span class="title">防欺诈</span>
+					</div>
+				</div>
+				<div class="item item06">
+					<div class="con">
+						<span class="icon"></span>
+						<span class="title">防泄露</span>
+					</div>
+				</div>
+				<div class="item item07">
+					<div class="con">
+						<span class="icon"></span>
+						<span class="title">防恶意网站</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="section section7">
+			<div class="bg"><img src="images/section8.jpg" alt=""></div>
+			<h3 class="webfont">小米路由器3</h3>
+			<h4 class="int">更多有趣功能，等你探索发现</h4>
+			<a class="go">了解详情</a>
+			<p class="copyright">
+				<a href="javascript:">小米商城</a>
+				<a href="javascript:">MIUI</a>
+				<a href="javascript:">米聊</a>
+				<a href="javascript:">小米网盟</a>
+				<a href="javascript:">小米淘宝直营店</a>
+				<a href="javascript:">问题反馈</a>
+				<span>|</span>
+				<span>网易公司版权所有 © 1997-2014 </span>
+			</p>
+		</div>
+		</div>
+	</body>
+</html>

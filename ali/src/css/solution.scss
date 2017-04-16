@@ -1,0 +1,246 @@
+*{box-sizing: border-box;list-style: none;margin: 0;padding: 0;}
+body{
+    font-family: "Microsoft Yahei","Hiragino Sans GB";
+    h1,h2,h3,dd,p{color: $fontColor;}
+}
+header{
+    background: $navcolor;
+    width: 100%;
+    border-bottom: 1px solid #555;
+    transition: all .3s;
+    &:hover{
+        background-color: #29344D;
+    }
+    nav{
+        height: $navHei;
+        width: $bodyWid;
+        margin: 0 auto;
+        div{
+            @extend .clearfix;
+            display: inline-block;
+            color: $headColor;
+            font-size: 14px;
+            .logo-cell{
+                @extend .fl;
+                padding: 18px;
+                cursor: pointer;
+                .logo-cell-1{
+                    position: absolute;
+                    width: 100px;
+                }
+                .logo-cell-2{
+                    width: 100px;
+                }
+            }
+            .nav-contant{
+                @extend .fl;
+                ul{
+                    li{
+                        cursor: pointer;
+                        @extend .fl;
+                        padding: 20px 15px;
+                        transition: all .1s;
+                        &:hover{
+                            background: #28d0e9;
+                        }
+                    }
+                }
+            }
+            .nav-right{
+                @extend .fl;
+                ul{
+                    li{
+                        cursor: pointer;
+                        @extend .fl;
+                        margin: 20px 15px;
+                        &:hover{
+                            color: #00C1DE;
+                        }
+                    }
+                }
+            }
+            .nav-btn{
+                @extend .active;
+                height: 59px;
+                width: 120px;
+                cursor: pointer;
+                text-align: center;
+                line-height: 60px;
+            }
+        }
+    }
+}
+.nav-list{
+    @extend .clearfix;
+    @extend .whiteFont;
+    @extend .disNone;
+    width: 100%;
+    background: #272727;
+    font-size: 14px;
+    position: absolute;
+    top: $navHei;
+    z-index: 999;
+    left: 0;
+    div{
+        width: $bodyWid;
+        @extend .center;
+        ul{
+            @extend .fl;
+            padding: $pandingSty;
+            li{
+                padding: 10px 10px;
+                border-right: 1px solid #CCCCCC;
+            }
+        }
+        .product-contant{
+            width: 750px;
+            @extend .clearfix;
+            .product-list-contant{
+                @extend .fl;
+                width: 300px;
+                margin: 10px;
+                background: #424141;
+                border-right: 0px;
+                cursor: pointer;
+                a{
+                    @extend .fl;
+                }
+                span{
+                    @extend .fl;
+                    font-size: 12px;
+                    padding-top: 5px;
+                }
+                &:hover{
+                    background: #00C1DE;
+                    a{color: #fff;}
+                }
+            }
+        }
+        .big-data{
+            width: 700px;
+        }
+        .big-data-nav{
+            @extend .fl;
+        }
+    }
+}
+
+
+
+footer{
+    .footer-center-bg{
+        background: $navcolor;
+        width: 100%;
+        height: 130px;
+        ul{
+            @extend .clearfix;
+            @extend .center;
+            width: $bodyWid;
+            li{
+                @extend .fl;
+                margin: 0 30px;
+                img{
+                    width: 40px;
+                    height: 40px;
+                    vertical-align: middle;
+                }
+                span{
+                    line-height: 130px;
+                    @extend .whiteFont;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .footer-buttom-bg{
+        width: 100%;
+        background: #373d41;
+        border-top: 1px solid #555;
+        @extend .cccFont;
+        .footer-buttom-content{
+            width: $bodyWid;
+            @extend .center;
+            @extend .clearfix;
+            padding: 40px;
+            @extend .borderButtom;
+            ul{
+                margin: 0 20px;
+                img{
+                    width: 80px;
+                }
+                @extend .fl;
+                font-size: 10px;
+                text-align: center;
+                .fontsize{
+                    font-weight: 900;
+                }
+                li{
+                    padding: 5px;
+                    
+                }
+                .hbFont{
+                    font-size: 22px;
+                }
+                .hsFont{
+                    font-size: 18px;
+                }
+            }
+            .footerList-left{
+                padding-right: 100px;
+                border-right: 1px solid #666;
+            }
+        }
+        .hot-product{
+            @extend .borderButtom;
+            width: $bodyWid;
+            @extend .center;
+            ul{
+                width: $bodyWid;
+                @extend .center;
+                @extend .clearfix;
+                @extend .smallFont;
+                @extend .cccFont;
+                li{
+                    @extend .fl;
+                    padding: 20px 10px;
+                    &:first-child{
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+        .footer-last{
+            width: $bodyWid;
+            @extend .center;
+            .footer-last-first{
+                ul{
+                    @extend .clearfix;
+                    li{
+                        position: relative;
+                        @extend .fl;
+                        padding: 10px 20px;
+                        select{
+                            padding: 3px 10px;
+                            margin-left: 300px;
+                        }
+                        input{
+                            padding: 2px 10px;
+                            
+                        }
+                        img{
+                            height: 20px;
+                            position: absolute;
+                            right: 23px;
+                            top: 14px;
+                        }
+                    }
+                }
+            }
+            .footer-last-second{
+                @extend .cccFont;
+                padding: 10px 50px;
+            }
+        }
+        
+    }
+}
